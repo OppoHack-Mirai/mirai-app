@@ -16,7 +16,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   bool srvState = false;
-  startServer() {}
 
   @override
   Widget build(BuildContext context) {
