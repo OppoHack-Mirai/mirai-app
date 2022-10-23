@@ -52,7 +52,7 @@ class _FilesState extends State<Files> {
                           ],
                         ) : Container(),
                         if (widget.user?.files != null)
-                          for (var file in widget.user!.files!) File(file: file)
+                          for (var file in widget.user!.files!) HostedFile(file: file)
                       ],
                     ),
                   ),

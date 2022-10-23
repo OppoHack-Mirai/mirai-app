@@ -115,7 +115,7 @@ class _HomeUserState extends State<HomeUser> {
                     ),
                     if(widget.user?.files != null)
                       for(var file in widget.user!.files!)
-                          File(file: file)
+                          HostedFile(file: file)
                   ],
                 ),
               )
