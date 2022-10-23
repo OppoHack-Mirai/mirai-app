@@ -2,8 +2,8 @@
     package="com.example.mirai_app">
    <application
         android:label="mirai_app"
-        android:name="${applicationName}"
-        android:icon="@mipmap/launcher_icon">
+        android:name="com.chaquo.python.android.PyApplication"
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -25,6 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+       <activity
+            android:name=".NodeActivity"
+       >
+       </activity>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data
