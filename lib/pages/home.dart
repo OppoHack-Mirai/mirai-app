@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mirai_app/widgets/header.dart';
 import 'package:mirai_app/widgets/ply_button.dart';
 import '../classes/mirai_user.dart';
+import 'package:mirai_app/mirai.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key, this.user});
@@ -41,10 +42,16 @@ class _HomeState extends State<Home> {
                         color: Colors.green, size: 90),
                     playIcon: const Icon(Icons.power_settings_new_rounded,
                         color: Colors.red, size: 90),
-                    onPressed: () {
+                    onPressed: () async {
+                      bool running = await Mirai.isRunning();
                       setState(() {
-                        srvState = !srvState;
+                        srvState = !running;
                       });
+                      if (srvState) {
+                        Mirai.startNode();
+                      } else {
+                        Mirai.stopNode();
+                      }
                     },
                   )),
             ],

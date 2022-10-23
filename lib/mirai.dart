@@ -11,8 +11,8 @@ class Mirai {
     await _channel.invokeMethod('runPythonScript');
   }
 
-  static bool isRunning() {
-    return _channel.invokeMethod('isRunning') as bool;
+  static Future<bool> isRunning() async {
+    return await _channel.invokeMethod('isRunning');
   }
 
   static void stopNode() async {
