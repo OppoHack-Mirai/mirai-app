@@ -10,7 +10,6 @@ class GoogleSignInProvider {
   GoogleSignInAccount? get user => _user;
 
   Future googleLogin() async {
-    await googleSignIn.disconnect();
     await googleSignIn.signOut();
     FirebaseAuth.instance.signOut();
     final googleUser = await googleSignIn.signIn();
