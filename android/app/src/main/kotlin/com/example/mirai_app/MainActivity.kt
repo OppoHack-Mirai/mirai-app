@@ -22,7 +22,7 @@ import kotlin.io.path.createTempDirectory
 class MainActivity: FlutterActivity() {
     companion object {
         @JvmStatic lateinit var filesDir: String
-        @JvmStatic var running: Boolean = false
+        @JvmStatic @Volatile var running: Boolean = false
         @JvmStatic lateinit var assets_real: AssetManager
 
         @JvmStatic
